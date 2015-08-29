@@ -1,0 +1,84 @@
+@import 'foundation/functions';
+@import 'foundation';
+@import 'mixins';
+
+$special-green  : #0A3E3C;
+$green          : #126169;
+$blue           : #bfd2d9;
+
+$font-family-script: "Great Vibes", cursive;
+$font-family-sans-serif: "Lato", sans-serif;
+$font-family-serif: "Vollkorn", Georgia, Cambria, "Times New Roman", Times, serif;
+$body-font-family: $font-family-serif;$header-font-family: $font-family-script;
+
+$include-html-classes: true;
+$include-html-global-classes: $include-html-classes;
+
+$row-width: rem-calc(2000);$column-gutter: rem-calc(0);
+
+$header-font-weight: $font-weight-normal;
+$header-font-style: normal;
+$header-font-color: $special-green;
+$header-line-height: 1.4;
+$header-top-margin: .2rem;
+$header-bottom-margin: .5rem;
+$header-text-rendering: optimizeLegibility;
+$button-font-family: $font-family-sans-serif;
+
+@import "breakpoints/small-up";
+@media #{$small-only}{
+  @import "breakpoints/small-only";
+}
+
+// 601 up
+@media only screen and (min-width : 601px) {
+    @import "breakpoints/medium-601-up";
+}
+
+// Medium screens
+// min-width 641px, medium screens (medium-up)
+// min-width 641px and max-width 1024px, use when QAing tablet-only issues (medium-only)
+@media #{$medium-up}{
+  @import "breakpoints/medium-up";
+}
+@media #{$medium-only}{
+  @import "breakpoints/medium-only";
+}
+
+// Large screens
+// min-width 1025px, large screens (large-up)
+// min-width 1025px and max-width 1440px, use when QAing large screen-only issues (large-only)
+@media #{$large-up}{
+  @import "breakpoints/large-up";
+}
+@media #{$large-only}{
+  @import "breakpoints/large-only";
+}
+
+// XLarge screens
+// min-width 1441px, xlarge screens (xlarge-up)
+// min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues (xlarge-only)
+@media #{$xlarge-up}{
+  @import "breakpoints/xlarge-up";
+}
+@media #{$xlarge-only}{
+  @import "breakpoints/xlarge-only";
+}
+
+// XXLarge screens
+// min-width 1921px, xxlarge screens (xxlarge-up)
+@media #{$xxlarge-up}{
+  @import "breakpoints/xxlarge-up";
+}
+
+// RETINA (2x RESOLUTION DEVICES)
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+  @import "breakpoints/retina";
+}
+
+// PRINT STYLESHEET
+@media print {
+  @import "breakpoints/print";
+}

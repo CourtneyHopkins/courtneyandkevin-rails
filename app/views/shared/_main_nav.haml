@@ -1,0 +1,30 @@
+.header-wrapper
+  .header.clearfix
+    .menu-outer-border.clearfix
+      .menu-border.clearfix
+        .desktop-nav-catch
+          = image_tag 'mobile-logo.png', class: 'mobile-logo show-for-small-only'
+          %ul.menu
+            %li
+              %a.field-note{ href: root_path }
+                %span 01. &nbsp;
+                Home
+            %li
+              %a.field-note{ href: the_proposal_path }
+                %span 02. &nbsp;
+                The Proposal
+            %li
+              %a.field-note{ href: the_wedding_path }
+                %span 03. &nbsp;
+                The Wedding
+            %li
+              %a.field-note{ href: galleries_path }
+                %span 04. &nbsp;
+                Galleries
+            %li
+              %a.field-note{ href: field_notes_path }
+                %span 05. &nbsp;
+                Field Notes
+        .right.show-for-small-only.mobile-menu-button.clearfix
+          = link_to '#', 'menu', class: 'right-off-canvas-toggle'
+%aside.right-off-canvas-menu.mobile-nav-catch

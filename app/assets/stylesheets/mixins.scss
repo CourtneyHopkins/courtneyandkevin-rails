@@ -1,0 +1,42 @@
+/******************************************************************
+
+Stylesheet: Mixins & Constants Stylesheet
+
+******************************************************************/
+
+/*********************
+TRANSITION
+*********************/
+
+// USAGE: @include transition(all 0.2s ease-in-out);
+
+@mixin transition($transition...) {
+  // defining prefixes so we can use them in mixins below
+  $prefixes:      ("-webkit", "-ms", "-o",  "");
+    @each $prefix in $prefixes {
+        #{$prefix}-transition: $transition;
+    }
+    transition: $transition;
+}
+
+/*********************
+HIDE TEXT
+*********************/
+
+@mixin hide-text() {
+    text-indent: 130%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*********************
+SPRITES
+*********************/
+
+@mixin sprites($position: '', $width: '', $height: '') {
+    background: url('../images/sprites.png') no-repeat;
+    background-position: $position;
+    width: $width;
+    height: $height;
+    background-size: 55px 115px;
+}

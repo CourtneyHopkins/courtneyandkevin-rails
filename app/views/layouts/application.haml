@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+    %title
+      Courtney and Kevin are getting married!
+    = stylesheet_link_tag 'application', media: 'all'
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic|Lato:400,300,700,900|Great+Vibes|Oswald'
+
+    = javascript_include_tag 'application'
+    = javascript_include_tag 'vendor/modernizr'
+    = csrf_meta_tags
+
+  %body
+    .off-canvas-wrap{ 'data-offcanvas' => '' }
+      .inner-wrap
+        = render partial: 'shared/main_nav'
+        = yield
+        = render partial: 'shared/footer'

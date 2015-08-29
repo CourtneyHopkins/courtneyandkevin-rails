@@ -1,0 +1,423 @@
+/******************************************************************
+
+Stylesheet: Small-Up Stylesheet
+
+Styles apply to base and up.
+
+******************************************************************/
+
+// general elements
+
+html,
+body {
+    width: 100%;
+    margin:0;
+    padding:0;
+    height:100%;
+    font-family: $font-family-sans-serif;
+    font-weight:400;
+    letter-spacing:1px;
+    color: $special-green;
+}
+
+.row {
+    max-width: 100%;
+}
+
+.small-row {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.button {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid $special-green;
+    font-size: 12px;
+    background-color: $white;
+    color: $special-green;
+    padding: 0;
+    width: 200px;
+    height: 40px;
+    margin: 0 10px 20px 0;
+
+    span {
+        display: block;
+        width: 200px;
+        height: 40px;
+        margin: 5px 0 0 5px;
+        border: 1px solid $special-green;
+        background-color: $white;
+        padding-top: 10px;
+    }
+
+    &:hover {
+        color: $special-green;
+        background-color: $blue;
+
+        span {
+            background-color: lighten($blue, 15%);
+        }
+    }
+}
+
+h1 {
+    font-family: $font-family-sans-serif;
+    text-transform: uppercase;
+}
+
+h2, h3 {
+    font-family: $font-family-script;
+    color: #93B2BA;
+}
+
+h5 {
+    margin-bottom: 20px;
+}
+
+p {
+    letter-spacing:0.3px;
+    font-family: $font-family-serif;
+}
+
+.italic {
+    font-style: italic;
+}
+
+// header
+
+.header-wrapper {
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+
+    .header {
+        width: 100%;
+        background-color: $white;
+        padding: 8px;
+
+        .menu-outer-border {
+            border: 1px solid $green;
+            padding: 3px;
+            background-color: $white;
+        }
+
+        .menu-border {
+            border: 1px solid $green;
+        }
+    }
+}
+
+.menu {
+    margin: 0;
+    list-style-type: none;
+
+    li {
+
+        a {
+            display: block;
+            color: $special-green;
+        }
+    }
+}
+
+.field-note {
+    font-family: $font-family-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 17px;
+
+    span {
+        font-family: "Oswald";
+        font-weight: 300;
+        font-style: normal;
+        font-size: 10px;
+    }
+}
+
+.page-title {
+    color: $white;
+    margin: 0;
+
+    span {
+        font-family: $font-family-script;
+        text-transform: capitalize;
+    }
+}
+
+.mobile-menu-button {
+    display: block;
+
+    a {
+        display: block;
+        padding: 10px 20px;
+        border-left: 1px solid $green;
+        font-family: $font-family-serif;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $special-green;
+    }
+}
+
+.mobile-logo {
+    float: left;
+}
+
+// homepage
+
+.hp-opening {
+    padding: 20px;
+    background: url('<%= asset_path 'hp.jpg' %>') no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    //     -webkit-box-shadow: inset 0px 5px 0px rgba(0, 0, 0, 0.35);
+    // -moz-box-shadow: inset 0px 5px 0px rgba(0, 0, 0, 0.35);
+    // box-shadow: inset 0px 5px 0px rgba(0, 0, 0, 0.35);
+
+    #logo {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .tagline {
+        letter-spacing: 1.5px;
+        font-family: $font-family-serif;
+        word-spacing: 8px;
+        font-weight: 500;
+        padding: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 360px;
+        color: $white;
+        border: 1px solid $white;
+        font-style: italic;
+
+        .tagline-border {
+            border: 1px solid $white;
+            padding: 10px;
+        }
+    }
+}
+
+.homepage {
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    .image {
+        padding: 5px;
+        background-color: $blue;
+        border: 1px solid $special-green;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
+
+        .image-border {
+            padding: 15px;
+            border: 1px solid $special-green;
+            background-color: $white;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+#hp-galleries {
+    padding: 20px;
+
+    .columns {
+        padding: 0;
+    }
+
+    .photo-collage {
+        background-color: $special-green;
+
+        .half-box,
+        .full-box {
+            background-position: center;
+            background-size: cover;
+            opacity: 0.5;
+        }
+    }
+}
+
+#hp-main-section-wrapper {
+
+    .green-wrapper {
+        background-color: $special-green;
+    }
+
+    p, h2 {
+        border-bottom: 1px solid $blue;
+        padding-bottom: 12px;
+        margin-bottom: 20px;
+        color: $blue;
+    }
+}
+
+// page
+
+.page-title {
+    font-family: $font-family-serif;
+    letter-spacing: 5px;
+}
+
+.page-wrapper {
+    background-color: $blue;
+    padding: 20px;
+
+    .page-inner-wrapper {
+        background-color: $white;
+        padding: 0 20px 20px 20px;
+        margin-top: -40px;
+    }
+}
+
+.entry-title {
+    color: $white;
+}
+
+.title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.page-wrapper {
+
+    .green-wrapper {
+        margin: 20px 0;
+        padding: 5px;
+        background-color: $special-green;
+
+        .green-wrapper-border {
+            border: 1px solid $blue;
+        }
+    }
+}
+
+.wedding-meta {
+
+    p {
+        color: $blue;
+        max-width: 300px;
+        border-top: 1px solid $blue;
+        border-bottom: 1px solid $blue;
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+}
+
+.accordion {
+    margin: 0;
+    border: 1px solid $special-green;
+
+    .content {
+         padding: 16px !important;
+         border-bottom: 1px solid $special-green;
+    }
+}
+
+.accordion-navigation > a {
+    border-bottom: 1px solid $special-green;
+    background: $blue;
+}
+
+.accordion-navigation:last-child > a {
+    border-bottom: none;
+}
+
+.accordion-navigation:last-child {
+
+    .content {
+        border-bottom: none;
+    }
+}
+
+// gallery
+
+.gallery-header {
+    background-color: #c1dfdf;
+
+    h1 {
+        margin: 0;
+    }
+}
+
+.gallery-wrapper {
+    padding-top: 20px;
+
+    h3 {
+        margin: 20px 0 5px 0;
+    }
+
+    p {
+        border-top: 1px solid $special-green;
+        padding-top: 5px;
+    }
+}
+
+.acc-list-group {
+
+    .row {
+        padding-top: 50px;
+    }
+}
+
+/**
+ * wordpress required css
+ */
+
+.wp-caption,
+.gallery-caption,
+.wp-caption-text,
+.sticky,
+.bypostauthor {
+	max-width: 100%;
+}
+
+.alignleft {
+	display: inline;
+	float: left;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+}
+
+.aligncenter {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+// footer
+
+footer {
+    background-color: $special-green;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: $white;
+
+    a {
+        color: $white;
+        padding-bottom: 2px;
+
+        &:hover {
+            color: $white;
+            border-bottom: 1px solid $white;
+        }
+    }
+}

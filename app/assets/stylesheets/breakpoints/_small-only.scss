@@ -1,0 +1,105 @@
+/******************************************************************
+
+Stylesheet: Small-Only Stylesheet
+
+Styles apply between base and 640px.
+
+******************************************************************/
+
+// general elements
+
+.vertical-spacing {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+// header
+
+.menu {
+
+    li {
+
+        a {
+            color: $white;
+            border-bottom: 1px solid $white;
+            padding: 20px 25px;
+        }
+    }
+}
+
+.internal-header {
+
+    .arrow {
+        display: none !important;
+    }
+}
+
+.internal-title {
+
+    h1 {
+        color: $white;
+        background-image: url('../images/hp.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+#logo {
+    max-width: 320px;
+    margin-top: 30px;
+}
+
+.mobile-logo {
+    max-width: 30px;
+    margin: 5px 0 0 20px;
+}
+
+// homepage
+
+.tagline {
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+.full-box {
+    height: 200px;
+}
+
+.half-box {
+    height: 100px;
+}
+
+#hp-main-section-wrapper {
+
+    .row {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    h2 {
+        margin-top: 20px;
+    }
+
+    .image {
+        display: none;
+    }
+}
+
+// page
+
+.page-title {
+    padding: 40px 0;
+}
+
+// gallery
+
+.gallery-button {
+    display: none;
+}
+
+// page
+
+.story-button {
+    margin: 0 0 40px 0 !important;
+}

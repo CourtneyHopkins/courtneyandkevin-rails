@@ -1,0 +1,56 @@
+%section.hp-opening.clearfix
+  .row
+    = image_tag 'courtneyandkevin.png', id: 'logo'
+    .tagline.text-center
+      .tagline-border
+        %span Are Getting Married!
+.homepage.clearfix
+  %section#hp-main-section-wrapper
+    .green-wrapper
+      .green-wrapper-border
+        .green-wrapper-border-inner
+          #hp-proposal.row.vertical-spacing
+            .small-12.medium-6.columns
+              .image
+                .image-border
+                  = image_tag 'Kevin-courtney-engagement-hp.jpg'
+            .small-12.medium-6.small-only-text-center.columns
+              .text
+                %h2 The Proposal
+                %p
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget ex sodales, maximus tellus ac, egestas mi. Nam lacinia, augue in porttitor pulvinar, justo magna consectetur nibh, eget facilisis leo lacus sed massa.
+                %a.button{ href: the_proposal_path }
+                  %span Read the whole story
+          #hp-wedding.row.vertical-spacing
+            .small-12.medium-6.columns.small-only-text-center.medium-text-right
+              .text
+                %h2 The Wedding
+                %p
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget ex sodales, maximus tellus ac, egestas mi. Nam lacinia, augue in porttitor pulvinar, justo magna consectetur nibh, eget facilisis leo lacus sed massa. Nulla facilisis viverra sem, id tincidunt magna.
+                %a.button{ href: the_wedding_path }
+                  %span Get all the details
+            .small-12.medium-6.columns
+              .image
+                .image-border
+                  = image_tag 'gaielea.jpg'
+  %section#hp-galleries
+    .row.photo-collage
+      .small-3.columns
+        .full-box{ style: "background-image: url('#{ asset_path 'courtkev.jpg'}');" }
+      .small-2.columns
+        .half-box{ style: "background-image: url('#{ asset_path '6.jpg'}');" }
+        .half-box{ style: "background-image: url('#{ asset_path '16-copy.jpg'}');" }
+      .small-4.columns
+        .full-box{ style: "background-image: url('#{ asset_path '9.jpg'}');" }
+      .small-3.columns
+        .half-box{ style: "background-image: url('#{ asset_path '7.jpg'}');" }
+        .half-box{ style: "background-image: url('#{ asset_path 'adventure.jpg'}');" }
+    .text
+      .row.vertical-spacing
+        .small-12.medium-10.medium-centered.large-6.large-centered.columns
+          %h2.text-center Photo Galleries
+          %p.small-only-text-center
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget ex sodales, maximus tellus ac, egestas mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget ex sodales, maximus tellus ac, egestas mi.
+          %p.text-center
+            %a.button{ href: galleries_path }
+              %span View Our Galleries
