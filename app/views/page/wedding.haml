@@ -1,226 +1,223 @@
-%section.hp-opening.internal-header
-  .row
-    %h1.page-title.text-center The Wedding
-.row.page-wrapper
-  .page-inner-wrapper.clearfix
-    .clearfix
-      .green-wrapper.clearfix
-        .green-wrapper-border.clearfix
-          .green-wrapper-border-inner.clearfix
-            .small-12.columns.text-center.vertical-spacing.wedding-meta
-              %h2 Saturday, May 14th, 2016
-              %p 4:00pm &nbsp;|&nbsp; Gaie Lea &nbsp;|&nbsp; Staunton, VA
-      .show-for-medium-up
-        %ul.tabs.vertical{ 'data-tab' => '' }
-          %li.tab-title.active
-            %a{ href: '#panel11' } The Venue
-          %li.tab-title
-            %a{ href: '#panel21' } Accommodations
-          %li.tab-title
-            %a{ href: '#panel31' } Local Activities
-          %li.tab-title
-            %a{ href: '#panel41' } Registry
-        .tabs-content
-          .content.active#panel11
+= content_for :page_title do 
+  The Wedding
+.clearfix
+  .green-wrapper.clearfix
+    .green-wrapper-border.clearfix
+      .green-wrapper-border-inner.clearfix
+        .small-12.columns.text-center.vertical-spacing.wedding-meta
+          %h2 Saturday, May 14th, 2016
+          %p 4:00pm &nbsp;|&nbsp; Gaie Lea &nbsp;|&nbsp; Staunton, VA
+  .show-for-medium-up
+    %ul.tabs.vertical{ 'data-tab' => '' }
+      %li.tab-title.active
+        %a{ href: '#panel11' } The Venue
+      %li.tab-title
+        %a{ href: '#panel21' } Accommodations
+      %li.tab-title
+        %a{ href: '#panel31' } Local Activities
+      %li.tab-title
+        %a{ href: '#panel41' } Registry
+    .tabs-content
+      .content.active#panel11
+        .row
+          .small-12.columns
+            = image_tag 'venue.jpg'
             .row
-              .small-12.columns
-                = image_tag 'venue.jpg'
-                .row
-                  .small-12.large-8.columns.vertical-spacing
-                    %p
-                      %strong
-                        Both the wedding and reception will be held at Gaie Lea
-                      , an estate home built in 1952 and situated in Virginia’s historic Shenandoah Valley.
-                    %p 
-                      The ceremony will be held in the home's 
-                      %strong 
-                        front yard 
-                      with panoramic views of the 200 acre farm and the Blue Ridge mountains.
-                    %p 
-                      The reception will be help on the property's 
-                      %strong 
-                        pavilion
-                      , overlooking a pond, with a yard that will have games during cocktail hour and a firepit for smore's later in the evening.
-                    %p
-                      %a.button{ href: 'http://www.gaielea.com', target: '_blank' }
-                        %span
-                          Explore the venue
-                      %a.button{ href: 'https://www.google.com/maps/place/267+Bells+Ln,+Staunton,+VA+24401/@38.1701253,-79.0353537,17z/data=!3m1!4b1!4m2!3m1!1s0x89b4a039838c4029:0x16306c2816ba72f6', target: '_blank' }
-                        %span
-                          See Map
-                    %h3 Rain Contingency Plan
-                    %p 
-                      In the event of rain that day, we will move the ceremony into the pavilion where the reception will also be held. We will keep everyone posted that day as to what the plan will be based on the weather.
-          .content#panel21
+              .small-12.large-8.columns.vertical-spacing
+                %p
+                  %strong
+                    Both the wedding and reception will be held at Gaie Lea
+                  , an estate home built in 1952 and situated in Virginia’s historic Shenandoah Valley.
+                %p 
+                  The ceremony will be held in the home's 
+                  %strong 
+                    front yard 
+                  with panoramic views of the 200 acre farm and the Blue Ridge mountains.
+                %p 
+                  The reception will be help on the property's 
+                  %strong 
+                    pavilion
+                  , overlooking a pond, with a yard that will have games during cocktail hour and a firepit for smore's later in the evening.
+                %p
+                  %a.button{ href: 'http://www.gaielea.com', target: '_blank' }
+                    %span
+                      Explore the venue
+                  %a.button{ href: 'https://www.google.com/maps/place/267+Bells+Ln,+Staunton,+VA+24401/@38.1701253,-79.0353537,17z/data=!3m1!4b1!4m2!3m1!1s0x89b4a039838c4029:0x16306c2816ba72f6', target: '_blank' }
+                    %span
+                      See Map
+                %h3 Rain Contingency Plan
+                %p 
+                  In the event of rain that day, we will move the ceremony into the pavilion where the reception will also be held. We will keep everyone posted that day as to what the plan will be based on the weather.
+      .content#panel21
+        .row
+          .small-12.columns
+            = image_tag 'holiday-inn.jpg'
             .row
-              .small-12.columns
-                = image_tag 'holiday-inn.jpg'
-                .row
-                  .small-12.large-8.columns.vertical-spacing
-                    %p
-                      For your convenience, we have reserved a block of rooms for Friday and Saturday night at the 
-                      %a{ href: 'http://www.ihg.com/holidayinn/hotels/us/en/staunton/shdva/hoteldetail', target: '_blank'} 
-                        Holiday Inn Staunton Conference Center
-                      , which is 5 minutes away from our wedding venue.
-                    %p
-                      In order to reserve a room at our reserved discount, please book by April 14, 2016. Once you have chosen your date(s) of stay, under "Have a Group Code?", enter our wedding code: 
-                      %strong H81
-                    %p
-                      Check in will be at 3:00pm and check out at 11:00am
-                    %p
-                      The ceremony will begin at 4:00pm which gives guests who do not wish to come the night before an hour to check in and make their way to the ceremony, which is only a 5 minute drive away.
-                    %p
-                      %a.button{ href: 'http://www.ihg.com/holidayinn/hotels/us/en/staunton/shdva/hoteldetail', target: '_blank' }
+              .small-12.large-8.columns.vertical-spacing
+                %p
+                  For your convenience, we have reserved a block of rooms for Friday and Saturday night at the 
+                  %a{ href: 'http://www.ihg.com/holidayinn/hotels/us/en/staunton/shdva/hoteldetail', target: '_blank'} 
+                    Holiday Inn Staunton Conference Center
+                  , which is 5 minutes away from our wedding venue.
+                %p
+                  In order to reserve a room at our reserved discount, please book by April 14, 2016. Once you have chosen your date(s) of stay, under "Have a Group Code?", enter our wedding code: 
+                  %strong H81
+                %p
+                  Check in will be at 3:00pm and check out at 11:00am
+                %p
+                  The ceremony will begin at 4:00pm which gives guests who do not wish to come the night before an hour to check in and make their way to the ceremony, which is only a 5 minute drive away.
+                %p
+                  %a.button{ href: 'http://www.ihg.com/holidayinn/hotels/us/en/staunton/shdva/hoteldetail', target: '_blank' }
+                    %span Book a room
+                  %a.button{ href: 'https://www.google.com/maps/place/Holiday+Inn+Staunton+Conference+Center/@38.1688517,-79.0098228,17z/data=!3m1!4b1!4m2!3m1!1s0x89b49f859cd6828b:0x276f91827f09873d', target: '_blank' }
+                    %span See Map
+                %hr
+                %p
+                  %strong
+                    For those guests who wish to stay elsewhere, here is a list of other hotels in the surrounding area of a variety of price points:
+                .acc-list-group
+                  .row
+                    .small-12.medium-4.large-2.columns.show-for-medium-up
+                      = image_tag 'stonewall.jpg'
+                    .small-12.medium-8.large-10.columns.show-for-medium-up.acc-text
+                      %h3 Stonewall Jackson Hotel
+                      %p
+                        Originally opened in 1924, this traditional conference hotel is a 3-minute walk from Staunton Amtrak and an 8-minute walk from Wilson Park.
+                      %a.button{ href: 'http://www.stonewalljacksonhotel.com/', target: '_blank' } 
                         %span Book a room
-                      %a.button{ href: 'https://www.google.com/maps/place/Holiday+Inn+Staunton+Conference+Center/@38.1688517,-79.0098228,17z/data=!3m1!4b1!4m2!3m1!1s0x89b49f859cd6828b:0x276f91827f09873d', target: '_blank' }
-                        %span See Map
-                    %hr
-                    %p
-                      %strong
-                        For those guests who wish to stay elsewhere, here is a list of other hotels in the surrounding area of a variety of price points:
-                    .acc-list-group
-                      .row
-                        .small-12.medium-4.large-2.columns.show-for-medium-up
-                          = image_tag 'stonewall.jpg'
-                        .small-12.medium-8.large-10.columns.show-for-medium-up.acc-text
-                          %h3 Stonewall Jackson Hotel
-                          %p
-                            Originally opened in 1924, this traditional conference hotel is a 3-minute walk from Staunton Amtrak and an 8-minute walk from Wilson Park.
-                          %a.button{ href: 'http://www.stonewalljacksonhotel.com/', target: '_blank' } 
-                            %span Book a room
-                      .row
-                        .small-12.medium-4.large-2.columns.show-for-medium-up
-                          = image_tag 'hampton.jpg'
-                        .small-12.medium-8.large-10.columns.show-for-medium-up.acc-text
-                          %h3 Hampton Inn Staunton
-                          %p 
-                            This modern hotel is a 4-minute walk from the Staunton Mall and a 1.4-mile drive from the Frontier Culture Museum.
-                          %a.button{ href: 'http://hamptoninn3.hilton.com/en/hotels/virginia/hampton-inn-staunton-SHDVAHX/index.html', target: '_blank' }
-                            %span Book a room
-                      .row
-                        .small-12.medium-4.large-2.columns.show-for-medium-up
-                          = image_tag 'bestw.jpg'
-                        .small-12.medium-8.large-10.columns.show-for-medium-up.acc-text
-                          %h3 Best Western Staunton Inn
-                          %p
-                            Off Interstate 81, this straightforward hotel is 2.1 miles from the Frontier Culture Museum, and 3.3 miles from the American Shakespeare Center.
-                          %a.button{ href: 'http://book.bestwestern.com/bestwestern/US/VA/Staunton-hotels/BEST-WESTERN-Staunton-Inn/Hotel-Overview.do?propertyCode=47081&cm_mmc=BL-_-Google-_-GMB-_-47081', target: '_blank' }
-                            %span Book a room
-                      .row
-                        .small-12.medium-4.large-2.columns.show-for-medium-up
-                          = image_tag 'comfort.jpg'
-                        .small-12.medium-8.large-10.columns.show-for-medium-up.acc-text
-                          %h3 Comfort Inn
-                          %p
-                            This straightforward 5-story hotel in the Shenandoah Valley is off Interstate 81, 2.5 miles from the Woodrow Wilson Presidential Library in Downtown Staunton. The Frontier Culture Museum is 1.2 miles away.
-                          %a.button{ href: 'https://www.choicehotels.com/virginia/staunton/comfort-inn-hotels/va433?source=gglocaloz', target: '_blank' }
-                            %span Book a room
-                      .row
-                        .small-12.medium-4.large-2.columns.show-for-medium-up
-                          = image_tag 'sleep.jpg'
-                        .small-12.medium-8.large-10.columns.show-for-medium-up.acc-text
-                          %h3 Sleep Inn
-                          %a.button{ href: 'https://www.choicehotels.com/virginia/staunton/sleep-inn-hotels/va289?source=gglocaloz', target: '_blank' }
-                            %span Book a room
-                      .row
-                        .small-12.medium-4.large-2.columns.show-for-medium-up
-                          = image_tag 'red.jpg'
-                        .small-12.medium-8.large-10.columns.show-for-medium-up.acc-text
-                          %h3 Red Roof Inn Staunton
-                          %a.button{ href: 'https://www.redroof.com/property/Staunton/VA/24401/Hotels-close-to-Shenandoah-Valley-Regional-Airport-I-81/RRI706/', target: '_blank' }
-                            %span Book a room
-                      .row
-                        .small-12.medium-4.large-2.columns.show-for-medium-up
-                          = image_tag 'days.jpg'
-                        .small-12.medium-8.large-10.columns.show-for-medium-up.acc-text
-                          %h3 Days Inn Staunton North
-                          %p
-                            This straightforward low-rise hotel off Interstate 81 is adjacent to the Club at Ironwood golf course, a 9-minute drive from the Woodrow Wilson Presidential Library and Museum, and 17.3 miles from the Grand Caverns.
-                          %a.button{ href: 'http://www.daysinn.com/hotels/virginia/staunton/days-inn-staunton-north/hotel-overview?cid=local', target: '_blank' } 
-                            %span>Book a room
-          .content#panel31
+                  .row
+                    .small-12.medium-4.large-2.columns.show-for-medium-up
+                      = image_tag 'hampton.jpg'
+                    .small-12.medium-8.large-10.columns.show-for-medium-up.acc-text
+                      %h3 Hampton Inn Staunton
+                      %p 
+                        This modern hotel is a 4-minute walk from the Staunton Mall and a 1.4-mile drive from the Frontier Culture Museum.
+                      %a.button{ href: 'http://hamptoninn3.hilton.com/en/hotels/virginia/hampton-inn-staunton-SHDVAHX/index.html', target: '_blank' }
+                        %span Book a room
+                  .row
+                    .small-12.medium-4.large-2.columns.show-for-medium-up
+                      = image_tag 'bestw.jpg'
+                    .small-12.medium-8.large-10.columns.show-for-medium-up.acc-text
+                      %h3 Best Western Staunton Inn
+                      %p
+                        Off Interstate 81, this straightforward hotel is 2.1 miles from the Frontier Culture Museum, and 3.3 miles from the American Shakespeare Center.
+                      %a.button{ href: 'http://book.bestwestern.com/bestwestern/US/VA/Staunton-hotels/BEST-WESTERN-Staunton-Inn/Hotel-Overview.do?propertyCode=47081&cm_mmc=BL-_-Google-_-GMB-_-47081', target: '_blank' }
+                        %span Book a room
+                  .row
+                    .small-12.medium-4.large-2.columns.show-for-medium-up
+                      = image_tag 'comfort.jpg'
+                    .small-12.medium-8.large-10.columns.show-for-medium-up.acc-text
+                      %h3 Comfort Inn
+                      %p
+                        This straightforward 5-story hotel in the Shenandoah Valley is off Interstate 81, 2.5 miles from the Woodrow Wilson Presidential Library in Downtown Staunton. The Frontier Culture Museum is 1.2 miles away.
+                      %a.button{ href: 'https://www.choicehotels.com/virginia/staunton/comfort-inn-hotels/va433?source=gglocaloz', target: '_blank' }
+                        %span Book a room
+                  .row
+                    .small-12.medium-4.large-2.columns.show-for-medium-up
+                      = image_tag 'sleep.jpg'
+                    .small-12.medium-8.large-10.columns.show-for-medium-up.acc-text
+                      %h3 Sleep Inn
+                      %a.button{ href: 'https://www.choicehotels.com/virginia/staunton/sleep-inn-hotels/va289?source=gglocaloz', target: '_blank' }
+                        %span Book a room
+                  .row
+                    .small-12.medium-4.large-2.columns.show-for-medium-up
+                      = image_tag 'red.jpg'
+                    .small-12.medium-8.large-10.columns.show-for-medium-up.acc-text
+                      %h3 Red Roof Inn Staunton
+                      %a.button{ href: 'https://www.redroof.com/property/Staunton/VA/24401/Hotels-close-to-Shenandoah-Valley-Regional-Airport-I-81/RRI706/', target: '_blank' }
+                        %span Book a room
+                  .row
+                    .small-12.medium-4.large-2.columns.show-for-medium-up
+                      = image_tag 'days.jpg'
+                    .small-12.medium-8.large-10.columns.show-for-medium-up.acc-text
+                      %h3 Days Inn Staunton North
+                      %p
+                        This straightforward low-rise hotel off Interstate 81 is adjacent to the Club at Ironwood golf course, a 9-minute drive from the Woodrow Wilson Presidential Library and Museum, and 17.3 miles from the Grand Caverns.
+                      %a.button{ href: 'http://www.daysinn.com/hotels/virginia/staunton/days-inn-staunton-north/hotel-overview?cid=local', target: '_blank' } 
+                        %span>Book a room
+      .content#panel31
+        .row
+          .small-12.columns
+            = image_tag 'Downtown-Staunton.jpg'
             .row
-              .small-12.columns
-                = image_tag 'Downtown-Staunton.jpg'
-                .row
-                  .small-12.large-8.columns.vertical-spacing
-                    %p
-                      Both the wedding and reception will be held at Gaie Lea, an estate home built in 1952 and situated in Virginia’s historic Shenandoah Valley.
-                    %p 
-                      The ceremony will be held in the home's front yard with panoramic views of the 200 acre farm and the Blue Ridge mountains.
-                    %p
-                      The reception will be help on the property's pavilion, overlooking a pond, with a yard that will have games during cocktail hour and a firepit for smore's later in the evening.
-                    %p
-                      %a.button{ href: 'https://www.google.com/maps/place/Staunton,+VA/@38.1592754,-79.0629105,13z/data=!3m1!4b1!4m2!3m1!1s0x89b4a08eb8621697:0xe5d6e4710a09b66e', target: '_blank' }
-                        %span See map of Staunton, VA
-          .content#panel41
+              .small-12.large-8.columns.vertical-spacing
+                %p
+                  Both the wedding and reception will be held at Gaie Lea, an estate home built in 1952 and situated in Virginia’s historic Shenandoah Valley.
+                %p 
+                  The ceremony will be held in the home's front yard with panoramic views of the 200 acre farm and the Blue Ridge mountains.
+                %p
+                  The reception will be help on the property's pavilion, overlooking a pond, with a yard that will have games during cocktail hour and a firepit for smore's later in the evening.
+                %p
+                  %a.button{ href: 'https://www.google.com/maps/place/Staunton,+VA/@38.1592754,-79.0629105,13z/data=!3m1!4b1!4m2!3m1!1s0x89b4a08eb8621697:0xe5d6e4710a09b66e', target: '_blank' }
+                    %span See map of Staunton, VA
+      .content#panel41
+        .row
+          .small-12.columns
+            = image_tag 'zola_registry.jpg'
             .row
-              .small-12.columns
-                = image_tag 'zola_registry.jpg'
-                .row
-                  .small-12.large-8.columns.vertical-spacing
-                    %p
-                      We are registered at Zola. Zola is an innovative Registry that is transforming how couples and guests share, buy, and ship wedding gifts.
-                    %h3 Here's a video of how it works:
-                    .flex-video
-                      %iframe{ width: '560', height: '315', src: 'https://www.youtube.com/embed/ysI8hmJaj4s', frameborder: '0', allowfullscreen: ''}
-                    %br
-                    .text-center
-                      %a.button{ href: 'https://www.zola.com/', target: '_blank' }
-                        %span See our Registry
-      .show-for-small-only
-        %ul.accordion{ 'data-accordion' => '' }
-          %li.accordion-navigation
-            %a{ href: '#panel1a' } The Venue
-            #panel1a.content
-              %p
-                %strong Both the wedding and reception will be held at Gaie Lea
-                , an estate home built in 1952 and situated in Virginia’s historic Shenandoah Valley.
-              %p
-                The ceremony will be held in the home's 
-                %strong front yard 
-                with panoramic views of the 200 acre farm and the Blue Ridge mountains.
-              %p 
-                The reception will be help on the property's 
-                %strong pavilion
-                , overlooking a pond, with a yard that will have games during cocktail hour and a firepit for smore's later in the evening.
-                %a.button{ href: 'http://www.gaielea.com', target: '_blank' }
-                  %span Explore the venue
-                %a.button{ href: 'https://www.google.com/maps/place/267+Bells+Ln,+Staunton,+VA+24401/@38.1701253,-79.0353537,17z/data=!3m1!4b1!4m2!3m1!1s0x89b4a039838c4029:0x16306c2816ba72f6', target: '_blank' }
-                  %span See Map
-              %h3 Rain Contingency Plan
-              %p
-                In the event of rain that day, we will move the ceremony into the pavilion where the reception will also be held. We will keep everyone posted that day as to what the plan will be based on the weather.
-          %li.accordion-navigation
-            %a{ href: '#panel2a' } Accommodations
-            #panel2a.content
-              %p
-                For your convenience, we have reserved a block of rooms for Friday and Saturday night at the 
-                %a{ href: 'http://www.ihg.com/holidayinn/hotels/us/en/staunton/shdva/hoteldetail', target: '_blank' } Holiday Inn Staunton Conference Center
-                , which is 5 minutes away from our wedding venue.
-              %p
-                In order to reserve a room at our reserved discount, please book by April 14, 2016. Once you have chosen your date(s) of stay, under "Have a Group Code?", enter our wedding code: 
-                %strong H81
-              %p 
-                Check in will be at 3:00pm and check out at 11:00am
-              %p>
-                The ceremony will begin at 4:00pm which gives guests who do not wish to come the night before an hour to check in and make their way to the ceremony, which is only a 5 minute drive away.
-              %p
-                %a.button{ href: 'http://www.ihg.com/holidayinn/hotels/us/en/staunton/shdva/hoteldetail', target: '_blank' }
-                  %span Book a room
-                %a.button{ href: 'https://www.google.com/maps/place/Holiday+Inn+Staunton+Conference+Center/@38.1688517,-79.0098228,17z/data=!3m1!4b1!4m2!3m1!1s0x89b49f859cd6828b:0x276f91827f09873d', target: '_blank' }
-                  %span See Map
-              %hr
-              %p
-                %strong
-                  For those guests who wish to stay elsewhere, click here for a list of other hotels in the surrounding area of a variety of price points:
-              %a.button{ href: 'https://www.google.com/webhp?sourceid=chrome-instant&rlz=1C5CHFA_enUS564US565&ion=1&espv=2&es_th=1&ie=UTF-8#safe=active&q=staunton+hotel+list&rflfq=1&tbm=lcl', target: '_blank' }
-                %span Staunton Hotel List
-          %li.accordion-navigation
-            %a{ href: '#panel3a' } Local Activities
-            #panel3a.content
-              Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          %li.accordion-navigation
-            %a{ href: '#panel4a' } Registry
-            #panel4a.content
-              Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              .small-12.large-8.columns.vertical-spacing
+                %p
+                  We are registered at Zola. Zola is an innovative Registry that is transforming how couples and guests share, buy, and ship wedding gifts.
+                %h3 Here's a video of how it works:
+                .flex-video
+                  %iframe{ width: '560', height: '315', src: 'https://www.youtube.com/embed/ysI8hmJaj4s', frameborder: '0', allowfullscreen: ''}
+                %br
+                .text-center
+                  %a.button{ href: 'https://www.zola.com/', target: '_blank' }
+                    %span See our Registry
+  .show-for-small-only
+    %ul.accordion{ 'data-accordion' => '' }
+      %li.accordion-navigation
+        %a{ href: '#panel1a' } The Venue
+        #panel1a.content
+          %p
+            %strong Both the wedding and reception will be held at Gaie Lea
+            , an estate home built in 1952 and situated in Virginia’s historic Shenandoah Valley.
+          %p
+            The ceremony will be held in the home's 
+            %strong front yard 
+            with panoramic views of the 200 acre farm and the Blue Ridge mountains.
+          %p 
+            The reception will be help on the property's 
+            %strong pavilion
+            , overlooking a pond, with a yard that will have games during cocktail hour and a firepit for smore's later in the evening.
+            %a.button{ href: 'http://www.gaielea.com', target: '_blank' }
+              %span Explore the venue
+            %a.button{ href: 'https://www.google.com/maps/place/267+Bells+Ln,+Staunton,+VA+24401/@38.1701253,-79.0353537,17z/data=!3m1!4b1!4m2!3m1!1s0x89b4a039838c4029:0x16306c2816ba72f6', target: '_blank' }
+              %span See Map
+          %h3 Rain Contingency Plan
+          %p
+            In the event of rain that day, we will move the ceremony into the pavilion where the reception will also be held. We will keep everyone posted that day as to what the plan will be based on the weather.
+      %li.accordion-navigation
+        %a{ href: '#panel2a' } Accommodations
+        #panel2a.content
+          %p
+            For your convenience, we have reserved a block of rooms for Friday and Saturday night at the 
+            %a{ href: 'http://www.ihg.com/holidayinn/hotels/us/en/staunton/shdva/hoteldetail', target: '_blank' } Holiday Inn Staunton Conference Center
+            , which is 5 minutes away from our wedding venue.
+          %p
+            In order to reserve a room at our reserved discount, please book by April 14, 2016. Once you have chosen your date(s) of stay, under "Have a Group Code?", enter our wedding code: 
+            %strong H81
+          %p 
+            Check in will be at 3:00pm and check out at 11:00am
+          %p>
+            The ceremony will begin at 4:00pm which gives guests who do not wish to come the night before an hour to check in and make their way to the ceremony, which is only a 5 minute drive away.
+          %p
+            %a.button{ href: 'http://www.ihg.com/holidayinn/hotels/us/en/staunton/shdva/hoteldetail', target: '_blank' }
+              %span Book a room
+            %a.button{ href: 'https://www.google.com/maps/place/Holiday+Inn+Staunton+Conference+Center/@38.1688517,-79.0098228,17z/data=!3m1!4b1!4m2!3m1!1s0x89b49f859cd6828b:0x276f91827f09873d', target: '_blank' }
+              %span See Map
+          %hr
+          %p
+            %strong
+              For those guests who wish to stay elsewhere, click here for a list of other hotels in the surrounding area of a variety of price points:
+          %a.button{ href: 'https://www.google.com/webhp?sourceid=chrome-instant&rlz=1C5CHFA_enUS564US565&ion=1&espv=2&es_th=1&ie=UTF-8#safe=active&q=staunton+hotel+list&rflfq=1&tbm=lcl', target: '_blank' }
+            %span Staunton Hotel List
+      %li.accordion-navigation
+        %a{ href: '#panel3a' } Local Activities
+        #panel3a.content
+          Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      %li.accordion-navigation
+        %a{ href: '#panel4a' } Registry
+        #panel4a.content
+          Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
