@@ -13,6 +13,6 @@ class PageController < ApplicationController
   end
 
   def field_notes
-
+    @posts = Post.all
   end
 end
