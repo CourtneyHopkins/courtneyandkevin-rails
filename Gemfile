@@ -10,6 +10,7 @@ gem 'pg'
 # Views
 gem 'haml'
 gem 'foundation-rails'
+gem 'tinymce-rails'
 
 # Authentication
 gem 'devise'

@@ -4,6 +4,10 @@
 %br
 = form.label :body
 %br
-= form.text_area :body
+= form.text_area :body, class: 'tinymce', rows: 40, cols: 120
 %br
 = form.submit
+
+= content_for :page_specific_js do 
+  = tinymce_assets
+  = tinymce

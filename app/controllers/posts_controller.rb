@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, except: [ :new, :create ]
+  before_action :require_admin, except: :show
 
   def show
   end
