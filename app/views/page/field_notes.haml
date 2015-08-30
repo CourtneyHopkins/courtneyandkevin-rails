@@ -1,0 +1,20 @@
+%section.hp-opening
+  .row
+    %h1.page-title.text-center Posts
+.row.page-wrapper
+  .page-inner-wrapper.clearfix
+    .small-12.columns
+      .row.vertical-spacing
+        .small-12.medium-10.medium-centered.large-6.large-centered.columns
+          - @posts.each do |post|
+            .blog-section.article
+              .row
+                .small-12.columns.medium-10.medium-centered.large-9.large-centered.content-width.entry-content
+                  %a
+                    %h3.text-center
+                      = post.title
+                  .byline.text-center
+                    = time_ago_in_words( post.created_at ) + ' on ' + post.created_at.strftime( '%B %-d, %Y' )
+                  .text-center
+                    %a.button{ href: post_path( post.slug ) }
+                      %span Read More

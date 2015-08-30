@@ -1,0 +1,10 @@
+%section.hp-opening
+  .row
+    %h1.page-title.text-center
+      = "Editing #{ @post.title }"
+.row.page-wrapper
+  .page-inner-wrapper.clearfix
+    .small-12.columns.gallery-wrapper
+      .small-block-grid-1.medium-block-grid-2.large-block-grid-4
+        = form_for @post, url: post_path( @post.slug ) do |f|
+          = render partial: 'form', locals: { form: f }
