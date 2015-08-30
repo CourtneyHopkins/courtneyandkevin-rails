@@ -1,9 +1,4 @@
-%section.hp-opening
-  .row
-    %h1.page-title.text-center New Post
-.row.page-wrapper
-  .page-inner-wrapper.clearfix
-    .small-12.columns.gallery-wrapper
-      .small-block-grid-1.medium-block-grid-2.large-block-grid-4
-        = form_for @post do |f|
-          = render partial: 'form', locals: { form: f }
+.small-12.columns.gallery-wrapper
+  .small-block-grid-1.medium-block-grid-2.large-block-grid-4
+    = form_for @post do |f|
+      = render partial: 'form', locals: { form: f }

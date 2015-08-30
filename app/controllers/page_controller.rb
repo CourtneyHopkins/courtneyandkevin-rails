@@ -1,6 +1,6 @@
 class PageController < ApplicationController
   def home
-    layout 'home'
+    render layout: 'home'
   end
 
   def proposal
