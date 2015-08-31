@@ -1,0 +1,7 @@
+%h1 Editing Gallery
+= form_for @gallery, url: gallery_path( @gallery.slug ) do |f|
+  = render partial: 'form', locals: { f: f }
+
+= link_to 'Show', @gallery
+= link_to 'Back', galleries_path
+= link_to 'Destroy', gallery_path( @gallery.slug ), method: 'DELETE'

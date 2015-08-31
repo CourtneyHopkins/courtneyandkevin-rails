@@ -10,7 +10,7 @@ class PageController < ApplicationController
   end
 
   def gallery
-
+    @galleries = Gallery.order( :created_at )
   end
 
   def field_notes

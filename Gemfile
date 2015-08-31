@@ -11,6 +11,8 @@ gem 'pg'
 gem 'haml'
 gem 'foundation-rails'
 gem 'tinymce-rails'
+gem 'carrierwave'
+gem "mini_magick"
 
 # Authentication
 gem 'devise'

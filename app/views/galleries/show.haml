@@ -1,0 +1,18 @@
+%p#notice= notice
+= image_tag @gallery.featured_image
+%p
+  %strong Title:
+  = @gallery.title
+%p
+  %strong Body:
+  = @gallery.body.html_safe if @gallery.body
+%p
+  %strong Slug:
+  = @gallery.slug
+.row
+  .small-12.columns
+    - @gallery.gallery_images.each do |image|
+      = image_tag image.file.half
+- if current_user && current_user.is_admin?
+  = link_to '<span>Edit</span>'.html_safe, edit_gallery_path( @gallery.slug ), class: 'button'
+  = link_to 'Back', galleries_path
