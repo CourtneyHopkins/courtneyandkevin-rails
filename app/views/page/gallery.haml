@@ -10,4 +10,5 @@
         - if !gallery.coming_soon? || (current_user && current_user.is_admin?)
           %a.button{ href: gallery_path( gallery.slug ) }
             %span See Gallery
-  = link_to 'Add a new Gallery', new_gallery_path
+  - if current_user && current_user.is_admin?
+    = link_to 'Add a new Gallery', new_gallery_path
