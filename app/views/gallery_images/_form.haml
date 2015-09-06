@@ -16,5 +16,9 @@
     = f.label :gallery_id
     %br
     = f.select :gallery_id, Gallery.all.collect{ |gallery| [gallery.title, gallery.id] }
+  .field
+    = f.label :format
+    %br
+    =f.select :format, [['Half', 'half'], ['Full', 'full']]
   .actions
     = f.submit
