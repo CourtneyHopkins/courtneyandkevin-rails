@@ -1,5 +1,6 @@
 class GalleryImagesController < ApplicationController
   before_action :set_gallery_image, only: [:edit, :update, :destroy]
+  before_action :require_admin
 
   def new
     @gallery_image = GalleryImage.new
