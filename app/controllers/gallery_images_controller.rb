@@ -7,6 +7,7 @@ class GalleryImagesController < ApplicationController
   end
 
   def edit
+
   end
 
   def create
@@ -21,7 +22,7 @@ class GalleryImagesController < ApplicationController
 
   def update
     if @gallery_image.update(gallery_image_params)
-      redirect_to @gallery_image, notice: 'Gallery image was successfully updated.'
+      redirect_to edit_gallery_image_path(@gallery_image), notice: 'Gallery image was successfully updated.'
     else
       render :edit
     end
@@ -38,6 +39,6 @@ class GalleryImagesController < ApplicationController
     end
 
     def gallery_image_params
-      params.require(:gallery_image).permit(:file, :gallery_id)
+      params.require(:gallery_image).permit(:file, :gallery_id, :format)
     end
 end

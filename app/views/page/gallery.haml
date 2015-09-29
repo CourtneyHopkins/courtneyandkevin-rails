@@ -5,7 +5,9 @@
     - @galleries.each do |gallery|
       %li
         = image_tag gallery.featured_image
-        %h3= gallery.title
+        %h3
+          %a{ href: gallery_path( gallery.slug ) }
+            = gallery.title
         = gallery.body.html_safe if gallery.body
         - if !gallery.coming_soon? || (current_user && current_user.is_admin?)
           %a.button{ href: gallery_path( gallery.slug ) }

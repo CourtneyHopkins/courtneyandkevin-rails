@@ -12,6 +12,8 @@
     = f.label :file
     %br
     = f.file_field :file
+    - if @gallery_image.file
+      = image_tag @gallery_image.file
   .field
     = f.label :gallery_id
     %br

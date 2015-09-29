@@ -1,18 +1,86 @@
-%p#notice= notice
-= image_tag @gallery.featured_image
-%p
-  %strong Title:
-  = @gallery.title
-%p
-  %strong Body:
-  = @gallery.body.html_safe if @gallery.body
-%p
-  %strong Slug:
-  = @gallery.slug
-.row
-  .small-12.columns
-    - @gallery.gallery_images.each do |image|
-      = image_tag image.file.half
-- if current_user && current_user.is_admin?
-  = link_to '<span>Edit</span>'.html_safe, edit_gallery_path( @gallery.slug ), class: 'button'
-  = link_to 'Back', galleries_path
+= content_for :page_title do 
+  Galleries
+.gallery-wrapper
+  .small-12.large-4.columns.small-only-text-center.medium-only-text-center.put-fix-me-here
+    %div
+      #notice= notice
+      %h2= @gallery.title
+      = @gallery.body.html_safe if @gallery.body
+      = link_to galleries_path, class: 'button' do
+        %span Back to Galleries
+  .small-12.large-8.columns.desktop-image-area.gallery-window
+    .row
+      .small-12.columns
+        = image_tag @gallery.featured_image
+    .row
+      - @gallery.gallery_images.each do |image|
+        - if image.format == 'full'
+          .small-12.columns
+            = image_tag image.file.full
+        - else 
+          .small-12.medium-6.columns
+            = image_tag image.file.half
+    .hide-for-large-up.text-center
+      %br
+      = link_to galleries_path, class: 'button' do
+        %span Back to Galleries
+  - if current_user && current_user.is_admin?
+    = link_to '<span>Edit</span>'.html_safe, edit_gallery_path( @gallery.slug ), class: 'button'
+    = link_to galleries_path, class: 'button' do
+      %span Back to Galleries
+
+  / <div class="">
+  /     <div class="row">
+  /         <div class="small-12 columns">
+  /             <img src="<?php echo get_template_directory_uri(); ?>/images/adventure.jpg" />
+  /         </div>
+  /     </div>
+  /     <br>
+  /     <div class="row">
+  /         <div class="small-12">
+  /             <ul class="small-block-grid-1 medium-block-grid-2">
+  /                 <li>
+  /                     <img src="<?php echo get_template_directory_uri(); ?>/images/1.jpg" />
+  /                 </li>
+  /                 <li>
+  /                     <img src="<?php echo get_template_directory_uri(); ?>/images/5.jpg" />
+  /                 </li>
+  /             </ul>    
+  /         </div>
+  /     </div>
+  /     <div class="row">
+  /         <div class="small-12 columns">
+  /             <img src="<?php echo get_template_directory_uri(); ?>/images/11.jpg" />
+  /         </div>
+  /     </div>
+  /     <br>
+  /     <div class="row">
+  /         <div class="small-12">
+  /             <ul class="small-block-grid-1 medium-block-grid-2">
+  /             <li>
+  /                 <img src="<?php echo get_template_directory_uri(); ?>/images/9.jpg" />
+  /             </li>
+  /             <li>
+  /                 <img src="<?php echo get_template_directory_uri(); ?>/images/3.jpg" />
+  /             </li>
+  /         </div>
+  /     </div>
+  /     <div class="row">
+  /         <div class="small-12 columns">
+  /             <img src="<?php echo get_template_directory_uri(); ?>/images/4.jpg" />
+  /         </div>
+  /     </div>
+  /     <br>
+  /     <div class="row">
+  /         <div class="small-12">
+  /             <ul class="small-block-grid-1 medium-block-grid-2">
+  /             <li>
+  /                 <img src="<?php echo get_template_directory_uri(); ?>/images/14-copy.jpg" />
+  /             </li>
+  /             <li>
+  /                 <img src="<?php echo get_template_directory_uri(); ?>/images/16-copy.jpg" />
+  /             </li>
+  /         </div>
+  /     </div>
+      
+  / </div>

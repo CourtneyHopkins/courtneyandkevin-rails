@@ -48,8 +48,8 @@ p {
 }
 
 #logo {
-    max-width: 600px;
-    margin-top: 110px
+    // max-width: 600px;
+    // margin-top: 110px
 }
 
 .menu {
@@ -91,18 +91,33 @@ p {
 
 // homepage
 
+.homepage {
+    min-height: 700px;
+
+    .outer {
+        min-height: 700px;
+
+        .inner {
+            min-height: 700px;
+        }
+    }
+}
+
 .hp-opening {
 
     .outer {
         display: table;
         width: 100%;
         margin: 0 auto;
+        height: 100vh;
 
         .inner {
             display: table-cell;
             vertical-align: middle;
             width: 100%;
             padding: 20px;
+            height: 100vh;
+            position:relative;
 
             #logo {
                 width: 100%;
@@ -114,6 +129,27 @@ p {
 
             .tagline {
                 font-size: 25px;
+            }
+
+            .scroll-notice {
+                position: absolute;
+                bottom: 50px;
+                color: $white;
+                text-transform: uppercase;
+                font-size: 12px;
+                width: 100%;
+                margin-left: -40px;
+                padding-left: 40px;
+                z-index: 1;
+
+                .scroll-arrow {
+                    width: 60px;
+                    height: 60px;
+                    border-right: 1px solid $white;
+                    border-bottom: 1px solid $white;
+                    transform: rotate(37deg) skewx(-18deg);
+                    margin: -20px auto 0 auto;
+                }
             }
         }
     }
@@ -170,28 +206,45 @@ p {
 .tabs-content {
     width: 100%;
     max-width: 100%;
-    padding-top: 20px;
+    // padding-top: 20px;
 
     .content {
         padding: 0;
     }
 }
 
-.tabs.vertical {
-    position:absolute;
+.tabs {
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-flow: nowrap row;
+    -webkit-flex-flow: nowrap row;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    text-align: center;
     margin: 20px auto 0 auto !important;
-    border: 1px solid $special-green;
+    border-top: 1px solid $special-green;
+    border-right: 1px solid $special-green;
+    border-left: 1px solid $special-green;
 
     li {
         border-bottom: 1px solid $special-green;
+        background-color: lighten($blue, 10%);
 
         &:last-child {
-            border-bottom: none;
+            border-right: none;
+        }
+
+        a {
+            background-color: $blue;
         }
     }
 
     .active {
-        background-color: $blue;
+        border-bottom: none;
+        background-color: $white;
 
         a h3 {
             color: $primary-color;
@@ -199,14 +252,35 @@ p {
     }
 
     .tab-title {
-        position: relative !important;
+        flex: 1 1 auto;
+        -webkit-flex: 1 1 auto;
+        -moz-box-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        border-right: 1px solid $green;
+        transition:all 0.2s;
+        -webkit-transition:all 0.2s;
+        -o-transition:all 0.2s;
+        -moz-transition:all 0.2s;
+
+        a {
+            outline: none;
+
+            &:active, &:focus {
+                outline: none;
+            }
+        }
     }
 
     .tab-title > a {
         background-color: transparent;
+        font-family: "Oswald";
+        font-weight: 300;
+        font-style: normal;
+        font-size: 12px;
+        text-transform: uppercase;
 
         &:hover {
-            background-color: transparent;
+            background-color: transparent !important;
 
             h3 {
                 color: $primary-color;
@@ -216,6 +290,15 @@ p {
 
     h3 {
         margin: 10px 0;
+    }
+}
+
+.tabs-content {
+    .content {
+        padding: 20px;
+        border-left: 1px solid $special-green;
+        border-right: 1px solid $special-green;
+        border-bottom: 1px solid $special-green;
     }
 }
 

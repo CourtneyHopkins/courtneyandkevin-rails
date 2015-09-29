@@ -30,7 +30,15 @@
   = f.text_area :body, class: 'tinymce', rows: 20, cols: 40
 .actions
   = f.submit
-
+%hr
+%h2 Gallery Images
+= link_to 'Add New Image', new_gallery_image_path 
+.row
+  - @gallery.gallery_images.each do |image|
+    - if image.format == 'full'
+      = link_to image_tag(image.file.full).html_safe, edit_gallery_image_path(image)
+    - else 
+      = link_to image_tag(image.file.half).html_safe, edit_gallery_image_path(image)
 = content_for :page_specific_js do 
   = tinymce_assets
   = tinymce

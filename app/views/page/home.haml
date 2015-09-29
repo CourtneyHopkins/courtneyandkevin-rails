@@ -1,9 +1,14 @@
-%section.hp-opening.clearfix
-  .row
-    = image_tag 'courtneyandkevin.png', id: 'logo'
-    .tagline.text-center
-      .tagline-border
-        %span Are Getting Married!
+%section.hp-opening.homepage.clearfix
+  .row.outer.clearfix
+    .inner.clearfix
+      %h2#logo Kevin &amp; Courtney
+      / = image_tag 'courtneyandkevin.png', id: 'logo'
+      .tagline.text-center
+        .tagline-border
+          %span Are Getting Married!
+      .scroll-notice.text-center
+        scroll
+        .scroll-arrow
 .homepage.clearfix
   %section#hp-main-section-wrapper
     .green-wrapper
@@ -47,10 +52,10 @@
         .half-box{ style: "background-image: url('#{ asset_path 'adventure.jpg'}');" }
     .text
       .row.vertical-spacing
-        .small-12.medium-10.medium-centered.large-6.large-centered.columns
+        .small-12.medium-10.medium-centered.large-6.large-centered.columns.text-center
           %h2.text-center Photo Galleries
           %p.small-only-text-center
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget ex sodales, maximus tellus ac, egestas mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget ex sodales, maximus tellus ac, egestas mi.
+            Look through our collections of photos, from the first 3 years that we dated, to our engagement and wedding.
           %p.text-center
             %a.button{ href: galleries_path }
               %span View Our Galleries

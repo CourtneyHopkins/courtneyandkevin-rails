@@ -18,6 +18,16 @@ body {
     font-weight:400;
     letter-spacing:1px;
     color: $special-green;
+    background-image: url('<%= asset_path 'hp.jpg' %>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position:relative;
+    margin:0 auto;
 }
 
 .row {
@@ -69,6 +79,14 @@ h1 {
 h2, h3 {
     font-family: $font-family-script;
     color: #93B2BA;
+
+    a {
+        color: #93B2BA;
+
+        &:hover {
+            color: $special-green;
+        }
+    }
 }
 
 h5 {
@@ -90,6 +108,7 @@ p {
     position: absolute;
     width: 100%;
     padding: 20px;
+    z-index: 9999;
 
     .header {
         width: 100%;
@@ -168,21 +187,18 @@ p {
 
 .hp-opening {
     padding: 20px;
-    background: url('<%= asset_path 'hp.jpg' %>') no-repeat center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    //     -webkit-box-shadow: inset 0px 5px 0px rgba(0, 0, 0, 0.35);
-    // -moz-box-shadow: inset 0px 5px 0px rgba(0, 0, 0, 0.35);
-    // box-shadow: inset 0px 5px 0px rgba(0, 0, 0, 0.35);
 
     #logo {
-        width: 100%;
-        height: auto;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        // width: 100%;
+        // height: auto;
+        // display: block;
+        // margin-left: auto;
+        // margin-right: auto;
+        margin-top:  200px;
+        color: white;
+        font-size: 13vw;
+        text-align: center;
+        line-height: 34vh;
     }
 
     .tagline {
@@ -196,7 +212,7 @@ p {
         width: 360px;
         color: $white;
         border: 1px solid $white;
-        font-style: italic;
+        // font-style: italic;
 
         .tagline-border {
             border: 1px solid $white;
@@ -223,7 +239,7 @@ p {
             padding: 15px;
             border: 1px solid $special-green;
             background-color: $white;
-
+ 
             img {
                 width: 100%;
             }
@@ -233,6 +249,7 @@ p {
 
 #hp-galleries {
     padding: 20px;
+    background-color: $white;
 
     .columns {
         padding: 0;
@@ -297,7 +314,7 @@ p {
 .page-wrapper {
 
     .green-wrapper {
-        margin: 20px 0;
+        margin: 20px 0 0 0;
         padding: 5px;
         background-color: $special-green;
 
@@ -308,6 +325,7 @@ p {
 }
 
 .wedding-meta {
+    padding: 20px 0;
 
     p {
         color: $blue;
@@ -410,6 +428,7 @@ footer {
     text-transform: uppercase;
     font-size: 10px;
     color: $white;
+    position: relative;
 
     a {
         color: $white;
@@ -419,5 +438,11 @@ footer {
             color: $white;
             border-bottom: 1px solid $white;
         }
+    }
+
+    .login {
+        position: absolute;
+        text-align: right;
+        right: 20px;
     }
 }
