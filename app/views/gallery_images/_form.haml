@@ -21,6 +21,10 @@
   .field
     = f.label :format
     %br
-    =f.select :format, [['Half', 'half'], ['Full', 'full']]
+    = f.select :format, [['Half', 'half'], ['Full', 'full']]
+  .field
+    = f.label :position
+    %br
+    = f.number_field :position
   .actions
     = f.submit

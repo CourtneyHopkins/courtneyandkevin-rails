@@ -39,6 +39,6 @@ class GalleryImagesController < ApplicationController
     end
 
     def gallery_image_params
-      params.require(:gallery_image).permit(:file, :gallery_id, :format)
+      params.require(:gallery_image).permit(:file, :gallery_id, :format, :position)
     end
 end

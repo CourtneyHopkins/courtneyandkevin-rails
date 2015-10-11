@@ -2,6 +2,7 @@
   = @post.title
 .small-12.columns.gallery-wrapper
   .small-block-grid-1.medium-block-grid-2.large-block-grid-4
+    = image_tag @post.featured_image
     = @post.body.html_safe if @post.body
     = @post.created_at
     = link_to 'Back to posts', field_notes_path 

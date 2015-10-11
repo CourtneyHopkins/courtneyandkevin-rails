@@ -1,13 +1,21 @@
-= form.label :title
-%br
-= form.text_field :title
-%br
-= form.label :body
-%br
-= form.text_area :body, class: 'tinymce', rows: 40, cols: 120
-%br
-= form.submit
+.small-9.columns
+  = form.label :title
+  %br
+  = form.text_field :title
+  %br
+  = form.label :featured_image
+  %br
+  = form.file_field :featured_image
+  %br
+  = form.label :body
+  %br
+  = form.text_area :body, class: 'tinymce', rows: 40, cols: 120
+  %br
+  = form.submit
 
-= content_for :page_specific_js do 
-  = tinymce_assets
-  = tinymce
+  = content_for :page_specific_js do 
+    = tinymce_assets
+    = tinymce
+.small-3.columns
+  %p
+    = link_to 'View Post Images', post_images_path, target: '_blank'
