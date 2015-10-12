@@ -10,7 +10,7 @@
         %span Back to Galleries
     %br
   .small-12.large-8.columns.desktop-image-area.gallery-window
-    .row
+    .row.large-width-container
       - @gallery.gallery_images.by_position.each do |image|
         - if image.format == 'full'
           .small-12.columns
