@@ -12,5 +12,6 @@
 !/log/.keep
 /tmp
 public/uploads/*
+.DS_Store
 
 config/database.yml
