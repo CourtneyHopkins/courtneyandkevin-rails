@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# accepts arguments for environment
+# usage as bin/deploy staging or bin/deploy production
+
+default_remote="staging"
+remote=${1:-$default_remote}
+
+echo "Ensuring git is clean.  Please wait..."
+current_branch=`git rev-parse --abbrev-ref HEAD`
+
+echo "Fetching remote..."
+git pull origin $current_branch
+git pull origin master
+
+echo "Updating HEAD..."
+git push origin $current_branch
+
+if [ $remote == "production" ]; then
+  echo "Deploying master to $remote"
+  `git push $remote master`
+else
+  echo "Deploy $current_branch to $remote"
+  `git push $remote $current_branch:master --force`
+fi
