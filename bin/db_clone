@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+# accepts arguments for environment
+# usage as bin/db_clone staging or bin/db_clone production
+
+require 'yaml'
+
+remote_env = ARGV[0] || 'staging'
+db_config = YAML.load(File.open('./config/database.yml'))['development']
+dump_file = "#{remote_env}-#{Time.now.to_i}.dump"
+host = db_config['host'] || 'localhost'
+
+puts "Backing up #{remote_env} database to #{dump_file}.  Please wait..."
+%x( heroku pg:backups capture -r #{remote_env} DATABASE_URL )
+
+puts 'Downloading database backup'
+%x( curl -o #{dump_file} `heroku pg:backups public-url -r #{remote_env}`)
+
+puts "Restoring to local database #{db_config['database']}"
+%x( pg_restore #{dump_file} --clean --no-acl --no-owner -h #{host} -U #{db_config['username']} -d #{db_config['database']} )
+%x( rm -rf #{dump_file} )
+
+puts 'Clone is complete'
