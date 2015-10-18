@@ -1,7 +1,7 @@
 = content_for :page_title do 
   = @post.title
-.row
-  .small-12.medium-10.medium-centered.large-7.large-centered
+.row.gallery-wrapper
+  .small-12.medium-10.medium-centered.large-7.large-centered.columns
     = image_tag @post.featured_image
     = @post.body.html_safe if @post.body
     = @post.created_at
