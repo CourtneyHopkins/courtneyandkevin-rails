@@ -7,11 +7,14 @@
         .blog-section.article
           .row
             .small-12.columns.medium-10.medium-centered.large-9.large-centered.content-width.entry-content
+              %p
+                = image_tag @post.featured_image
               %a
                 %h3.text-center
                   = post.title
               .byline.text-center
-                = time_ago_in_words( post.created_at ) + ' on ' + post.created_at.strftime( '%B %-d, %Y' )
+                = post.created_at.strftime( '%B %-d, %Y' )
+              %br
               .text-center
                 %a.button{ href: post_path( post.slug ) }
                   %span Read More

@@ -3,7 +3,8 @@
 .post
   .row.gallery-wrapper
     .small-12.medium-10.medium-centered.large-7.large-centered.columns
-      = image_tag @post.featured_image
+      %p
+        = image_tag @post.featured_image
       = @post.body.html_safe if @post.body
       = @post.created_at
       = link_to 'Back to posts', field_notes_path 
