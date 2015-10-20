@@ -8,6 +8,10 @@ Styles apply between base and 640px.
 
 // general elements
 
+html, body {
+    background-attachment: scroll;
+}
+
 .vertical-spacing {
     padding-top: 20px;
     padding-bottom: 20px;
