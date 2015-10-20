@@ -55,5 +55,12 @@ $(document).ready(function() {
                 padding: '0'
             });
         }
-    });    
+    }); 
+
+    // wrap iframes in flex video class
+
+    $('.post').find('iframe').each(function() {
+        $(this).before($('<div class="flex-video">'));
+        $(this).after($('</div>'));
+    });
 });
