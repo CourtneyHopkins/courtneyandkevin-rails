@@ -8,6 +8,13 @@ Styles apply to 641px and up.
 
 // general elements
 
+html, body {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 h1, h2{
     margin-bottom: 10px;
 }
@@ -46,10 +53,17 @@ p {
     margin-top: 40px;
     margin-bottom: 20px;
     width: 360px;
+    border: 1px solid $white;
+
+    .tagline-border {
+        border: 1px solid $white;
+        padding: 10px;
+    }
 }
 
 #logo {
-    margin-top:  200px;
+    margin-top: 200px;
+    line-height: 34vh;
 }
 
 .menu {
