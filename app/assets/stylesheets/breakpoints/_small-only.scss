@@ -13,6 +13,10 @@ Styles apply between base and 640px.
     padding-bottom: 20px;
 }
 
+h1 {
+    font-size: 1.5rem;
+}
+
 // header
 
 .menu {
@@ -80,8 +84,8 @@ Styles apply between base and 640px.
 #hp-main-section-wrapper {
 
     .row {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     h2 {
@@ -103,6 +107,14 @@ Styles apply between base and 640px.
 
 .gallery-button {
     display: none;
+}
+
+.gallery-window {
+
+    .columns {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 // page
