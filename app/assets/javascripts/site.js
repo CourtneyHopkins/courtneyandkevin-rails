@@ -59,8 +59,9 @@ $(document).ready(function() {
 
     // wrap iframes in flex video class
 
-    $('.post').find('iframe').each(function() {
-        $(this).before($('<div class="flex-video">'));
-        $(this).after($('</div>'));
-    });
+    // $('.post').find('iframe').each(function() {
+    //     $(this).before($('<div class="flex-video">'));
+    //     $(this).after($('</div>'));
+    // });
+    $("iframe").wrap("<div class='flex-video'/>");
 });
