@@ -3,9 +3,9 @@
   %head
     %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
     %title
-      Courtney and Kevin are getting married!
+      Courtney and Kevin got married!
     = stylesheet_link_tag 'application', media: 'all'
-    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic|Lato:400,300,700,900|Great+Vibes|Oswald'
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic|Lato:400,300,700,900|Great+Vibes|La+Belle+Aurore'
 
     = javascript_include_tag 'application'
     = javascript_include_tag 'vendor/modernizr'
@@ -14,7 +14,7 @@
     .off-canvas-wrap{ 'data-offcanvas' => '' }
       .inner-wrap
         = render partial: 'shared/main_nav'
-        %section.hp-opening
+        %section.internal-opening
           .row
             %h1.page-title.text-center= yield :page_title
         .row.page-wrapper

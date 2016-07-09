@@ -2,43 +2,55 @@
   .row.outer.clearfix
     .inner.clearfix
       %h2#logo Kevin &amp; Courtney
-      / = image_tag 'courtneyandkevin.png', id: 'logo'
       .tagline.text-center
         .tagline-border
-          %span Are Getting Married!
-      .scroll-notice.text-center
-        scroll
-        .scroll-arrow
+          %span Got Married!
 .homepage.clearfix
   %section#hp-main-section-wrapper
     .green-wrapper
       .green-wrapper-border
         .green-wrapper-border-inner
-          #hp-proposal.row.vertical-spacing
-            .small-12.medium-6.columns
+          .row.vertical-spacing.text-center
+            .small-12.medium-6.large-4.columns
+              .text
+                %h3 The Proposal
               .image
                 .image-border
                   = image_tag 'Kevin-courtney-engagement-hp.jpg'
-            .small-12.medium-6.small-only-text-center.columns
+              %p
+                Read our story from Kevin's perspective as he meticulously planned every part of the proposal from the ring to the big event. You can even watch the video he made from GoPro footage of the whole thing!
+              %a.button{ href: the_proposal_path }
+                %span Read the whole story
+            .small-12.medium-6.large-4.columns
               .text
-                %h2 The Proposal
-                %p
-                  Read our story from Kevin's perspective as he meticulously planned every part of the proposal from the ring to the big event. You can even watch the video he made from GoPro footage of the whole thing!
-                %a.button{ href: the_proposal_path }
-                  %span Read the whole story
-          #hp-wedding.row.vertical-spacing
-            .small-12.medium-6.medium-push-6.columns
+                %h3 The Wedding
               .image
                 .image-border
-                  = image_tag 'gaielea.jpg'
-            .small-12.medium-6.medium-pull-6.columns.small-only-text-center.medium-text-right
+                  = image_tag 'Courtney-Kevin-May-14-2016-2-Bridal-Party-Family-Portraits-0014-hp.jpg'
+              %p
+                Relive the fun of the wedding weekend through all of the pictures we have collected from wedding prep, to the rehearsal dinner to the wedding! We were able to capture ceremony video footage as well and put a little video together. Check it out!
+              %a.button{ href: the_wedding_path }
+                %span Relive the wedding
+            .small-12.medium-12.large-4.columns
               .text
-                %h2 The Wedding
-                %p
-                  Here we've collected all of the need-to-know details about our upcoming wedding day on May 14th, 2016. You'll find information regarding the venue, accommodations, local activities in Staunton, and links to our registries.
-                %a.button{ href: the_wedding_path }
-                  %span Get all the details
+                %h3 Our Adventures
+              .image
+                .image-border
+                  = image_tag 'IMG_5495.jpg'
+              %p
+                We've been on many adventures during our time together. Here we'll post blog-like photo stories of our trips together, including our honeymoon to Gatlinburg, TN and Asheville, NC!
+              %a.button{ href: our_adventures_path }
+                %span Our Adventures
   %section#hp-galleries
+    .text
+      .row.vertical-spacing
+        .small-12.medium-10.medium-centered.large-6.large-centered.columns.text-center
+          %h2.text-center Photo Galleries
+          %p.small-only-text-center
+            Look through our collections of photos, from the first 3 years that we dated, to our engagement and wedding.
+          %p.text-center
+            %a.button{ href: galleries_path }
+              %span View Our Galleries
     .row.photo-collage
       .small-3.columns
         .full-box{ style: "background-image: url('#{ asset_path 'courtkev.jpg'}');" }
@@ -50,12 +62,3 @@
       .small-3.columns
         .half-box{ style: "background-image: url('#{ asset_path '9.jpg'}');" }
         .half-box{ style: "background-image: url('#{ asset_path 'adventure.jpg'}');" }
-    .text
-      .row.vertical-spacing
-        .small-12.medium-10.medium-centered.large-6.large-centered.columns.text-center
-          %h2.text-center Photo Galleries
-          %p.small-only-text-center
-            Look through our collections of photos, from the first 3 years that we dated, to our engagement and wedding.
-          %p.text-center
-            %a.button{ href: galleries_path }
-              %span View Our Galleries

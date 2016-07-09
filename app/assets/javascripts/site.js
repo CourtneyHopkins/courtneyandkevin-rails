@@ -28,40 +28,11 @@ $(document).ready(function() {
     }  
 
     homepageDesktopNavSourceOrder();
-    fixme();
     $(window).resize(function() {
         homepageDesktopNavSourceOrder();
-        fixme();
     });
-
-    // make .fixme fixed when scrolled down and static when scrolled above
-
-    if ($('.fixme').length > 0) {
-      var fixmeTop = $('.fixme').offset().top;       // get initial position of the element
-    }
-    
-    $(window).scroll(function() {                  // assign scroll event listener
-        var currentScroll = $(window).scrollTop(); // get current position
-        if (currentScroll >= fixmeTop) {           // apply position: fixed if you
-            $('.fixme').css({                      // scroll to that element or below it
-                position: 'fixed',
-                top: '0',
-                left: '40',
-                padding: '0 20px 0 0'
-            });
-        } else {                                   // apply position: static
-            $('.fixme').css({                      // if you scroll above it
-                position: 'static',
-                padding: '0'
-            });
-        }
-    }); 
 
     // wrap iframes in flex video class
 
-    // $('.post').find('iframe').each(function() {
-    //     $(this).before($('<div class="flex-video">'));
-    //     $(this).after($('</div>'));
-    // });
     $("iframe").wrap("<div class='flex-video'/>");
 });

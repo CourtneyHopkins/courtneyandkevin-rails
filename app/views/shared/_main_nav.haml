@@ -3,7 +3,6 @@
     .menu-outer-border.clearfix
       .menu-border.clearfix
         .desktop-nav-catch
-          = image_tag 'mobile-logo.png', class: 'mobile-logo show-for-small-only'
           %ul.menu
             %li
               %a.field-note{ href: root_path }
@@ -22,9 +21,9 @@
                 %span 04. &nbsp;
                 Galleries
             %li
-              %a.field-note{ href: field_notes_path }
+              %a.field-note{ href: our_adventures_path }
                 %span 05. &nbsp;
-                Field Notes
+                Our Adventures
         .right.show-for-small-only.mobile-menu-button.clearfix
           = link_to 'menu', '#', class: 'right-off-canvas-toggle'
   %p.notice= notice

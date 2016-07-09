@@ -1,15 +1,13 @@
 = content_for :page_title do 
   Galleries
 .gallery-wrapper.clearfix
-  .small-12.large-4.columns.small-only-text-center.medium-only-text-center.put-fix-me-here
-    %div
+  .small-12.large-7.large-centered.columns
+    %div.vertical-spacing
       #notice= notice
-      %h2= @gallery.title
+      .divider
+      %h3= @gallery.title
       = @gallery.body.html_safe if @gallery.body
-      = link_to galleries_path, class: 'button' do
-        %span Back to Galleries
-    %br
-  .small-12.large-8.columns.desktop-image-area.gallery-window
+  .small-12.large-10.large-centered.columns.desktop-image-area.gallery-window
     .row.large-width-container
       - @gallery.gallery_images.by_position.each do |image|
         - if image.format == 'full'

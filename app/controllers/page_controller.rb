@@ -13,7 +13,7 @@ class PageController < ApplicationController
     @galleries = Gallery.order( :created_at )
   end
 
-  def field_notes
+  def our_adventures
     @posts = Post.all
   end
 end

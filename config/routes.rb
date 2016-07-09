@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/the-proposal', to: 'page#proposal'
   get '/the-wedding', to: 'page#wedding'
   get '/galleries', to: 'page#gallery'
-  get '/field-notes', to: 'page#field_notes'
+  get '/our-adventures', to: 'page#our_adventures'
 
   resources :posts, except: :index
 end

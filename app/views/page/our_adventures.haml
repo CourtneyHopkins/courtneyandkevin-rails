@@ -1,5 +1,5 @@
 = content_for :page_title do 
-  Field Notes
+  Our Adventures
 .small-12.columns
   .row.vertical-spacing
     .small-12.medium-10.medium-centered.large-6.large-centered.columns
@@ -10,11 +10,12 @@
               %p
                 = image_tag post.featured_image
               %a{ href: post_path( post.slug ) }
-                %h3.text-center
+                .divider
+                %h3
                   = post.title
-              .byline.text-center
+                
+              %p.byline
                 = post.created_at.strftime( '%B %-d, %Y' )
               %br
-              .text-center
                 %a.button{ href: post_path( post.slug ) }
                   %span Read More
