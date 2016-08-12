@@ -126,3 +126,11 @@ h1 {
 .story-button {
     margin: 0 0 40px 0 !important;
 }
+
+.adventure-index-row > .row {
+    margin-bottom: 30px;
+}
+
+.adventure-index-row > .row:first-child {
+    margin-top: 30px;
+}

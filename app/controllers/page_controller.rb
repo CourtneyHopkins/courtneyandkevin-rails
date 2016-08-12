@@ -15,5 +15,8 @@ class PageController < ApplicationController
 
   def our_adventures
     @posts = Post.all
+    if params[:slug]
+      render "adventures/#{params[:slug]}"
+    end
   end
 end

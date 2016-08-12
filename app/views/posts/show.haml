@@ -8,7 +8,7 @@
       = image_tag @post.featured_image
     = @post.body.html_safe if @post.body
     %p.text-center
-      %a.button{ href: field_notes_path }
+      %a.button{ href: our_adventures_path }
         %span Back to Posts
     - if current_user && current_user.is_admin?
       = link_to 'Edit', edit_post_path( @post.slug )

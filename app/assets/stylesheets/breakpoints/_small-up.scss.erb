@@ -237,6 +237,10 @@ p {
     background-image: url('<%= asset_path 'Courtney-Kevin-May-14-2016-4-Ceremony-0052-smaller.jpg' %>');
 }
 
+.canoe-image {
+    background-image: url('<%= asset_path 'canoe.png' %>');
+}
+
 .video-image-side {
     background-repeat: no-repeat;
     background-position: center;
@@ -246,18 +250,22 @@ p {
     background-size: cover;
 }
 
+.wedding-image {
+    margin-top: 15px;
+}
+
 .album-list {
-    // background-color: lighten($blue, 15%);
+
+    .image {
+        border: 2px solid #a3a3a3;
+        padding: 20px;
+    }
 
     a {
-        display: block;
-        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
-        -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
-        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
+        // display: block;
 
         .album-text {
             padding: 20px;
-            border-top: 5px solid #ebebeb;
             background-color: $white;
             font-family: $font-family-sans-serif;
 
@@ -271,7 +279,7 @@ p {
             .sublabel {
                 font-weight: 300;
                 font-style: italic;
-                color: #ebebeb;
+                color: #a3a3a3;
             }
         }
     }
@@ -486,8 +494,7 @@ p {
 }
 
 .gallery-wrapper {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    margin-top: 15px;
 
     h3 {
         margin: 20px 0 5px 0;

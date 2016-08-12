@@ -1,21 +1,37 @@
 = content_for :page_title do 
   Our Adventures
-.small-12.columns
-  .row.vertical-spacing
-    .small-12.medium-10.medium-centered.large-6.large-centered.columns
-      - @posts.each do |post|
-        .blog-section.article
-          .row
-            .small-12.columns.medium-10.medium-centered.large-9.large-centered.content-width.entry-content
-              %p
-                = image_tag post.featured_image
-              %a{ href: post_path( post.slug ) }
-                .divider
-                %h3
-                  = post.title
-                
+/ page articles
+.adventure-index-row
+  
+  / dynamic articles
+  - @posts.each do |post|
+    .row
+      .small-12.medium-10.medium-centered.large-8.large-centered.columns
+        .row.clearfix{ :data => {:equalizer => ""} } 
+          .text-side{ :data => {:equalizer_watch => ""} }
+            .inner-border
+              .divider
+              %h3
+                = post.title
               %p.byline
                 = post.created_at.strftime( '%B %-d, %Y' )
-              %br
-                %a.button{ href: post_path( post.slug ) }
-                  %span Read More
+              %p
+                Right after Kevin proposed to me at the top of Sharp Top, we decided the first thing we wanted to do as an engaged couple was to try out the canoe we bought off of Craigslist the day before...
+              %a.button{ href: post_path( post.slug ) }
+                %span Read More
+          .video-image-side.canoe-image{ :data => {:equalizer_watch => ""} }
+    / .blog-section.article
+    /   .row
+    /     .small-12.columns.medium-10.medium-centered.large-9.large-centered.content-width.entry-content
+    /       %p
+    /         = image_tag post.featured_image
+    /       %a{ href: post_path( post.slug ) }
+    /         .divider
+    /         %h3
+    /           = post.title
+            
+    /       %p.byline
+    /         = post.created_at.strftime( '%B %-d, %Y' )
+    /       %br
+    /         %a.button{ href: post_path( post.slug ) }
+    /           %span Read More

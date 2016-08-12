@@ -3,7 +3,7 @@
 .clearfix
   .row
     .small-12.columns
-      = image_tag 'http://courtneyandkevin.s3.amazonaws.com/uploads/production/static/Courtney-Kevin-May-14-2016-2-Bridal-Party-Family-Portraits-0014-cropped.jpg'
+      = image_tag 'http://courtneyandkevin.s3.amazonaws.com/uploads/production/static/Courtney-Kevin-May-14-2016-2-Bridal-Party-Family-Portraits-0014-cropped.jpg', { class: 'wedding-image' }
   .row.vertical-spacing.entry-content
     .small-12.medium-10.medium-centered.large-6.large-centered.columns
       .divider
@@ -15,51 +15,8 @@
         In case you just can't get enough, we have photos galore to share as well as a video that we have put together of the ceremony! (Thanks Connor Jones for helping capture it on film!) Below are links to albums of photos that we've put together between the professional photos and photos that family and friends have shared. We're hoping to collect them all in one place for everyone to access. If you have any photos you would like to share, we would love to get a copy from you to post here on the site. Please click below to email us about your photos!
       .text-center
         %a.button{ href: 'mailto:courtneyjones.jmu@gmail.com' }
-          %span Email us!
-  .row.vertical-spacing.album-list
-    %h2.text-center
-      Wedding Albums
-    .small-12.columns
-      %ul.small-block-grid-1.medium-block-grid-2.large-block-grid-4
-        %li
-          %a
-            .image
-              .image-border
-                = image_tag 'Kevin-courtney-engagement-hp.jpg'
-            .album-text
-              %span.albumlabel
-                Preparation
-        %li
-          %a
-            .image
-              .image-border
-                = image_tag 'Kevin-courtney-engagement-hp.jpg'
-            .album-text
-              %span.albumlabel
-                Rehearsal Dinner
-        %li
-          %a
-            .image
-              .image-border
-                = image_tag 'Kevin-courtney-engagement-hp.jpg'
-            .album-text
-              %span.albumlabel
-                Wedding photos
-              %br 
-              %span.sublabel  
-                from family and friends
-        %li
-          %a
-            .image
-              .image-border
-                = image_tag 'Kevin-courtney-engagement-hp.jpg'
-            .album-text
-              %span.albumlabel
-                Wedding photos
-              %br 
-              %span.sublabel  
-                from J. Gaelen Smith Photography
-  .row.vertical-spacing
+          %span Send us your photos!
+  .row
     .small-12.medium-10.medium-centered.large-8.large-centered.columns
       .row.clearfix{ :data => {:equalizer => ""} } 
         .text-side{ :data => {:equalizer_watch => ""} }
@@ -76,6 +33,49 @@
             .inner-overlay
               .circle
                 .arrow-right
+  .row.vertical-spacing.album-list.text-center
+    %h2
+      Wedding Albums
+    .small-12.medium-6.medium-centered.columns
+      %p
+        Click below to see the wedding photos from the photographer! Please check back in a few days for rehearsal dinner photos as well as wedding photos that you all sent us!
+      %div.text-center
+        %a.button{ href: gallery_path( 'wedding-gallery' ) }
+          %span Wedding Photos
+      / %ul.small-block-grid-1.medium-block-grid-3
+      /   %li
+      /     %a
+      /       .image
+      /         .image-border
+      /           = image_tag 'Kevin-courtney-engagement-hp.jpg'
+      /       .album-text
+      /         %span.albumlabel
+      /           Pre-Wedding Photos
+      /         %br 
+      /         %span.sublabel  
+      /           Preparation and Rehearsal Dinner
+      /   %li
+      /     %a
+      /       .image
+      /         .image-border
+      /           = image_tag 'Kevin-courtney-engagement-hp.jpg'
+      /       .album-text
+      /         %span.albumlabel
+      /           Wedding photos
+      /         %br 
+      /         %span.sublabel  
+      /           from J. Gaelen Smith Photography
+      /   %li
+      /     %a
+      /       .image
+      /         .image-border
+      /           = image_tag 'Kevin-courtney-engagement-hp.jpg'
+      /       .album-text
+      /         %span.albumlabel
+      /           Wedding photos
+      /         %br 
+      /         %span.sublabel  
+      /           From family and friends
 #wedding-modal.reveal-modal{ :data => {:reveal => ""} }
   .flex-video
     %iframe{ width: 560, height: 315, src: 'https://www.youtube.com/embed/Rz0_5Hjz4-A', frameborder: 0, allowfullscreen: ''}
