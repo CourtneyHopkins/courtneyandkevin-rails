@@ -10,12 +10,14 @@
   .small-12.large-10.large-centered.columns.desktop-image-area.gallery-window
     .row.large-width-container
       - @gallery.gallery_images.by_position.each do |image|
-        - if image.format == 'full'
-          .small-12.columns
-            = image_tag image.file.full
-        - else 
-          .small-12.medium-6.columns
-            = image_tag image.file.half
+        .small-12.columns
+          = image_tag image.file
+        / - if image.format == 'full'
+        /   .small-12.columns
+        /     = image_tag image.file.full
+        / - else 
+        /   .small-12.medium-6.columns
+        /     = image_tag image.file.half
     .hide-for-large-up.text-center
       %br
       = link_to galleries_path, class: 'button' do

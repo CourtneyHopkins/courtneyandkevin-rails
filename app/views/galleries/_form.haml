@@ -35,10 +35,11 @@
 = link_to 'Add New Image', new_gallery_image_path 
 .row
   - @gallery.gallery_images.by_position.each do |image|
-    - if image.format == 'full'
-      = link_to image_tag(image.file.full).html_safe, edit_gallery_image_path(image)
-    - else 
-      = link_to image_tag(image.file.half).html_safe, edit_gallery_image_path(image)
+    = link_to image_tag(image.file).html_safe, edit_gallery_image_path(image)
+    / - if image.format == 'full'
+      
+    / - else 
+    /   = link_to image_tag(image.file.half).html_safe, edit_gallery_image_path(image)
 = content_for :page_specific_js do 
   = tinymce_assets
   = tinymce
