@@ -7,6 +7,8 @@
       .divider
       %h3= @gallery.title
       = @gallery.body.html_safe if @gallery.body
+      - if current_user && current_user.is_admin?
+        = link_to '<span>Edit</span>'.html_safe, edit_gallery_path( @gallery.slug ), class: 'button'
   .small-12.large-10.large-centered.columns.desktop-image-area.gallery-window
     .row.large-width-container
       - @gallery.gallery_images.by_position.each do |image|
@@ -22,5 +24,3 @@
       %br
       = link_to galleries_path, class: 'button' do
         %span Back to Galleries
-- if current_user && current_user.is_admin?
-  = link_to '<span>Edit</span>'.html_safe, edit_gallery_path( @gallery.slug ), class: 'button'

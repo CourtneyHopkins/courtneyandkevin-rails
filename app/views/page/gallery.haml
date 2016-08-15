@@ -1,5 +1,7 @@
 = content_for :page_title do 
   Galleries
+- if current_user && current_user.is_admin?
+  = link_to 'Add a new Gallery', new_gallery_path
 .row
   .small-12.columns.gallery-wrapper
     %ul.small-block-grid-1.medium-block-grid-2.large-block-grid-4
@@ -13,5 +15,3 @@
           - if !gallery.coming_soon? || (current_user && current_user.is_admin?)
             %a.button{ href: gallery_path( gallery.slug ) }
               %span See Gallery
-    - if current_user && current_user.is_admin?
-      = link_to 'Add a new Gallery', new_gallery_path

@@ -6,41 +6,45 @@
     %ul
       - @gallery.errors.full_messages.each do |message|
         %li= message
-.field
-  = f.label :title
-  %br
-  = f.text_field :title
-.field
-  = f.check_box :coming_soon
-  = f.label :coming_soon
 .row
   .small-12.medium-6.columns
     .field
-      = f.label :featured_image
+      = f.label :title
       %br
-      = f.file_field :featured_image
+      = f.text_field :title
+    .field
+      = f.check_box :coming_soon
+      = f.label :coming_soon
+    .row
+      .small-12.medium-6.columns
+        .field
+          = f.label :featured_image
+          %br
+          = f.file_field :featured_image
+      .small-12.medium-6.columns
+        - if @gallery.featured_image
+          %p
+            Current Image:
+          = image_tag @gallery.featured_image
+    .field
+      = f.label :body
+      %br
+      = f.text_area :body, class: 'tinymce', rows: 20, cols: 40
+    .actions
+      = f.submit
   .small-12.medium-6.columns
-    - if @gallery.featured_image
-      %p
-        Current Image:
-      = image_tag @gallery.featured_image
-.field
-  = f.label :body
-  %br
-  = f.text_area :body, class: 'tinymce', rows: 20, cols: 40
-.actions
-  = f.submit
-%hr
-%h2 Gallery Images
-= link_to 'Add New Image', new_gallery_image_path 
-.row
-  - @gallery.gallery_images.by_position.each do |image|
-    = link_to image_tag(image.file).html_safe, edit_gallery_image_path(image)
-    / - if image.format == 'full'
-      
-    / - else 
-    /   = link_to image_tag(image.file.half).html_safe, edit_gallery_image_path(image)
-= content_for :page_specific_js do 
-  = tinymce_assets
-  = tinymce
+    %h2 Gallery Images
+    = link_to 'Add New Image', new_gallery_image_path 
+    %br
+    %br
+    .row
+      - @gallery.gallery_images.by_position.each do |image|
+        = link_to image_tag(image.file).html_safe, edit_gallery_image_path(image)
+        / - if image.format == 'full'
+          
+        / - else 
+        /   = link_to image_tag(image.file.half).html_safe, edit_gallery_image_path(image)
+    = content_for :page_specific_js do 
+      = tinymce_assets
+      = tinymce
 
