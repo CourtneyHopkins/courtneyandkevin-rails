@@ -11,5 +11,5 @@ class GalleryFeaturedImageUploader < CarrierWave::Uploader::Base
     "uploads/#{Rails.env}/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  process resize_to_fill: [600, 600]
+  process resize_to_fill: [600, 400]
 end
